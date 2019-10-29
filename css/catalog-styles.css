@@ -1,0 +1,142 @@
+
+
+.catalog {
+	padding: 0 60px 0 60px;
+}
+.catalog__inner-wrap {
+	padding-bottom: 80px;
+}
+.catalog__inner-wrap {
+	padding: 60px 0 0 0;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
+	box-sizing: border-box;
+}
+.catalog__item-wrapper {
+    margin-bottom: 80px;
+}
+.catalog__inner-banner {
+	text-align: center;
+	width: 100%;
+	padding: 0 0 40px 0;
+}
+
+.catalog__banner-title,
+.catalog__banner-text {
+	display: inline-block;
+	margin: 0 0 0 0;
+}
+
+.catalog__banner-title {
+	font-size: 24px;
+	font-family: 'Open Sans Bold';
+	letter-spacing: .5px;
+	margin: 0 0 25px 0;
+}
+
+.catalog__banner-title span {
+	color: #f14a58;
+}
+
+.catalog-btn-wrap {
+	width: 100%;
+	padding: 0 0 100px 0;
+}
+
+
+.catalog__btn {
+	color: #f14a58;
+	border-color: #f14a58;
+	margin: 0 auto;
+	display: block; 
+}
+
+
+/*BANNER_DOWN STYLES*/
+
+.banner-down {
+	width: 100%;
+	height: 384px;
+	box-sizing: border-box;
+	border-top: 1px solid lightgrey;
+	border-bottom: 1px solid lightgrey; 
+}
+.banner-down__left {
+	float: left;
+	background: url(../img/banner-img-01.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.banner-down__right {
+	float: right;
+}
+
+.banner-down__left,
+.banner-down__right {
+	width: 50%;
+	position: relative;
+	height: 384px;
+}
+
+.banner-down__right-inner-first {
+	background: url(../img/banner-img-02.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.banner-down__right-inner-first {
+	width: 50%;
+	float: left;
+	position: relative;
+	height: 384px;
+}
+.banner-down__right-inner {
+	float: right;
+	width: 50%;
+	position: relative;
+	height: 384px;
+	background: url(../img/banner-img-03.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+}
+
+
+.down-adidas {
+	color: white;
+	right: 80px;
+	top: 30px;
+}
+
+.down-sale-adidas {
+	right: 135px;
+	top: 105px;
+	color: white;	
+}
+
+.down-pants,
+.down-bag {
+	color: white;
+	right: 55px;
+	bottom: 55px;
+}
+
+.down-sale-pants,
+.down-sale-bag {
+	right: 135px;
+	bottom: 53px;
+	color: white;
+	font-family: 'Roboto';	
+}
+
+.down-bag {
+	color: #f14a58;
+	right: 130px;
+}
+
+.down-sale-bag {
+	color: grey;
+}
