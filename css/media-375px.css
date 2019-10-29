@@ -79,8 +79,34 @@
 
 
 
+.x {
+	width: 100%;
+	background-color: white;
+	height: calc(100vh - 84px);
+	display: none;
+	padding: 50px 0 0 0;
+}
 
+.b {
+	display: block;
 
+}
+.x .head__navigation-list {
+	display: block;
+}
+
+.x .head__navigation-list li{
+	display: block;
+	margin-bottom: 25px;
+}
+
+.x .head__navigation-list li a{
+	font-size: 40px;
+}
+
+.x .head__navigation-list li{
+ color: black;
+}
 
 
 
