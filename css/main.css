@@ -145,26 +145,22 @@
 
 /*BURGER MENU*/
 
-.menu-icon {
+.head__menu-icon {
 	display: none;
 }
 
-
-
-
-.x {
-	width: 100%;
-	background-color: green;
-	height: calc(100vh - 84px);
+.head__hidden-menu {
 	display: none;
 
 }
-
-.b {
+.head__show-hidden-menu {
 	display: block;
 
 }
 /*******************************************************************/
+
+
+
 
 /*BANNER STYLES*/
 

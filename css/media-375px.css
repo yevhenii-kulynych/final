@@ -2,7 +2,7 @@
 @media (min-width: 375px) and (max-width: 667px) {
 	.wrap {
 		display: block; /*for IE*/
-		/*max-width: 375px;*/
+		max-width: 375px;
 		height: 100%;
 		margin: 0 auto;
 	}
@@ -27,88 +27,104 @@
 	}
 	/*BERGER MENU***************************************/
 	
-.menu-icon {
-	display: block;
-  position: relative;
-  width: 30px;
-  height: 5px;
-  background-color: black;
-}
+	.head__menu-icon {
+		display: block;
+  		position: relative;
+  		width: 30px;
+  		height: 5px;
+  		background-color: black;
+	}
 
-.menu-icon::before {
-  position: absolute;
-  left: 0;
-  top: -10px;
-  content: '';
-  width: 30px;
-  height: 5px;
-  background-color: black;
-  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	.head__menu-icon::before {
+  		position: absolute;
+  		left: 0;
+  		top: -10px;
+  		content: '';
+  		width: 30px;
+  		height: 5px;
+  		background-color: black;
+  		transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	}
 
-}
+	.head__menu-icon::after {
+  		position: absolute;
+  		left: 0;
+  		top: 10px;
+  		content: '';
+  		width: 30px;
+  		height: 5px;
+  		background-color: black;
+  		transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	}
 
-.menu-icon::after {
-  position: absolute;
-  left: 0;
-  top: 10px;
-  content: '';
-  width: 30px;
-  height: 5px;
-  background-color: black;
-  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+	.head__menu-icon.head__menu-icon-active {
+  		background-color: transparent;
+	}
 
-}
+	.head__menu-icon.head__menu-icon-active::before {
+  		transform: rotate(45deg);
+  		top: 0;
+  		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	}
 
-.menu-icon.menu-icon-active {
-  background-color: transparent;
-}
-
-.menu-icon.menu-icon-active::before {
-  transform: rotate(45deg);
-  top: 0;
-  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-}
-
-.menu-icon.menu-icon-active::after {
-  transform: rotate(-45deg);
-  top: 0;
-  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
-}
+	.head__menu-icon.head__menu-icon-active::after {
+  		transform: rotate(-45deg);
+  		top: 0;
+  		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+	}
 
 
 
 
+	/*HIDDEN MENU*/
 
-.x {
-	width: 100%;
-	background-color: white;
-	height: calc(100vh - 84px);
-	display: none;
-	padding: 30px 0 0 0;
-}
+	.head__hidden-menu {
+		width: 100%;
+		background-color: white;
+		height: calc(100vh - 84px);
+		display: none;
+		padding: 30px 0 0 20px;
+	}
 
-.b {
-	display: block;
+	.head__show-hidden-menu  {
+		display: block;
+	}
 
-}
-.x .head__navigation-list {
-	display: block;
-}
+	.head__hidden-menu .head__navigation-list {
+		display: block;
+	}
 
-.x .head__navigation-list li{
-	display: block;
-	margin-bottom: 15px;
-}
+	.head__hidden-menu .head__navigation-list li{
+		display: block;
+		margin-bottom: 15px;
+	}
 
-.x .head__navigation-list li a{
-	font-size: 34px;
-}
+	.head__hidden-menu .head__navigation-list li a{
+		font-size: 34px;
+	}
 
-.x .head__navigation-list li{
- color: black;
-}
+	.head__hidden-menu .head__navigation-list li{
+ 		color: black;
+	}
+	.head__hidden-menu .head__navigation-list li:last-child{
+ 		color: black;
+ 		position: relative;
+ 		width: 200px;
+	}
+	.head__hidden-menu .head__navigation-input-search {
+    	width: 197px; 
+    	border: none;
+    	border-bottom: 1px solid grey;
+    	float: none;
+	}
 
+	.head__navigation-list-img {
+    	position: absolute;
+    	right: 0;
+    	top: 5px;
+	}
 
+/****/
 
 
 

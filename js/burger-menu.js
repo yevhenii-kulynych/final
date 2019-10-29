@@ -1,8 +1,4 @@
 
-//бургер меню
-
-
-
 
 let logo = document.getElementsByClassName('head__logo');
 
@@ -30,22 +26,32 @@ window.addEventListener('resize', function(event){
 
 // ховер линка
 let link = document.getElementsByClassName('item-hover__text');
-let linkArr = Array.prototype.slice.call(link);
 
-linkArr.forEach( i => {
-	i.addEventListener('click', () => {
+let arr = [];
+for (let i = 0; i < link.length; i+=1) {
+	arr.push(link[i]);
+}
+
+// for (let i = 0; i < arr.length; i+=1) {
+// 	arr[i].addEventListener('click', function() {
+// 		location.href = 'item.html';
+// 	})
+// }
+
+arr.forEach( function(i) {
+	i.addEventListener('click', function() {
 		location.href = 'item.html';
 	})
 });
 
 
+//бургер меню
+let btn = document.getElementsByClassName('head__menu-icon-wrapper');
+let m = document.getElementsByClassName('head__menu-icon');
+let x = document.getElementsByClassName('head__hidden-menu');
 
-let btn = document.getElementsByClassName('menu-icon-wrapper');
-let m = document.getElementsByClassName('menu-icon');
-let x = document.getElementsByClassName('x');
+btn[0].addEventListener('click', function() {
 
-btn[0].addEventListener('click', () => {
-
-	m[0].classList.toggle('menu-icon-active');
-	x[0].classList.toggle('b')	
+	m[0].classList.toggle('head__menu-icon-active');
+	x[0].classList.toggle('head__show-hidden-menu')	
 });
