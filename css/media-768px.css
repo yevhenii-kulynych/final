@@ -222,6 +222,32 @@
 	}
 
 	/*CATALOG STYLES***************************************************/
+
+	/*HIDDEN DIV********/
+	.catalog-filter__all-options {
+
+	}
+	.catalog-filter__active-filter {
+
+    	width: calc(100% - 80px);
+    	top: 103px; 
+	}
+
+	/**/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	.catalog {
     	padding: 0 40px 0 40px;
 	}

@@ -1,4 +1,199 @@
 
+/*FILTER*/
+.catalog-filter {
+	position: relative;
+}
+.catalog-filter__main-wrap {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.catalog-filter {
+	cursor: pointer;
+}
+.catalog-filter__list li {
+	display: inline-block;
+	color: black;
+}
+.catalog-filter__list li a {
+	text-decoration: none;
+	font-size: 16px;
+	font-family: 'Open Sans Bold';
+	color: black;
+}
+.catalog-filter__active {
+	color: #f14a58;
+}
+.catalog-filter__icon-wrapper {
+	display: none;
+}
+/*HIDDEN DIV********/
+.catalog-filter__all-options {
+	display: none;
+	width: 100%;
+	background-color: white;
+}
+.catalog-filter__active-filter {
+	display: flex;
+	flex-wrap: wrap;
+    position: absolute;
+    z-index: 999;
+    width: calc(100% - 120px);
+    top: 103px;
+}
+/*.shadow {
+  box-shadow: 0 0 0 9999px rgba(0,0,0, 0.3);
+}*/
+
+
+/**/
+.catalog-filter__menu-icon {
+	display: block;
+  	position: relative;
+  	width: 30px;
+  	height: 5px;
+  	background-color: black;
+}
+
+.catalog-filter__menu-icon::before {
+  	position: absolute;
+  	left: 0;
+  	top: -10px;
+  	content: '';
+  	width: 30px;
+  	height: 5px;
+  	background-color: black;
+  	transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.catalog-filter__menu-icon::after {
+  	position: absolute;
+  	left: 0;
+  	top: 10px;
+  	content: '';
+  	width: 30px;
+  	height: 5px;
+  	background-color: black;
+  	transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.catalog-filter__menu-icon.catalog-filter__menu-icon-active {
+  	background-color: transparent;
+}
+
+.catalog-filter__menu-icon.catalog-filter__menu-icon-active::before {
+  	transform: rotate(45deg);
+  	top: 0;
+  	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  	background-color: #f14a58;
+}
+
+.catalog-filter__menu-icon.catalog-filter__menu-icon-active::after {
+  	transform: rotate(-45deg);
+  	top: 0;
+  	transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  	background-color: #f14a58;
+}
+
+.catalog-filter__menu-icon-showed {
+	display: block;
+}
+
+.catalog-filter__all-options-inner {
+	display: flex;
+}
+
+.catalog-filter__all-options-inner-list {
+	width: 33%;
+}
+.catalog-filter__inner-list-fashion li:first-child,
+.catalog-filter__inner-list-product-type li:first-child,
+.catalog-filter__inner-list-color li:first-child,
+.catalog-filter__inner-list-brand li:first-child,
+.catalog-filter__inner-list-product-size li:first-child,
+.catalog-filter__inner-list-price-range li:first-child {
+	color: black;
+	font-size: 16px;
+	font-family: 'Roboto-Bold';
+	margin-bottom: 25px;
+	list-style: none;
+/*	position: relative;
+	right: 20px;*/
+}
+.catalog-filter__inner-list-fashion li a,
+.catalog-filter__inner-list-product-type li a,
+.catalog-filter__inner-list-color li a,
+.catalog-filter__inner-list-brand li a,
+.catalog-filter__inner-list-product-size li a,
+.catalog-filter__inner-list-price-range li a {
+	font-size: 14px;
+	font-family: 'Open Sans Bold';
+	margin-bottom: 25px;
+	text-decoration: none;
+	color: #a8a8a8;
+}
+.catalog-filter__inner-list-fashion li, 
+.catalog-filter__inner-list-product-type li,
+.catalog-filter__inner-list-color li,
+.catalog-filter__inner-list-brand li,
+.catalog-filter__inner-list-product-size li,
+.catalog-filter__inner-list-price-range li {
+	list-style: none;
+	margin-bottom: 15px;
+}
+
+.round {
+	width: 5px;
+	height: 5px;
+	border-radius: 100%;
+	background-color:#a8a8a8;
+	display: inline-block;
+	position: relative;
+    bottom: 2px;
+    margin-right: 20px; 
+}
+
+.catalog-filter__inner-list-fashion li a:hover,
+.catalog-filter__inner-list-product-type li a:hover,
+.catalog-filter__inner-list-color li a:hover,
+.catalog-filter__inner-list-brand li a:hover,
+.catalog-filter__inner-list-product-size li a:hover,
+.catalog-filter__inner-list-price-range li a:hover {
+
+	color: #f14a58;
+}
+.catalog-filter__inner-list-fashion li a:hover .round,
+.catalog-filter__inner-list-product-type li a:hover .round,
+.catalog-filter__inner-list-color li a:hover .round,
+.catalog-filter__inner-list-brand li a:hover .round,
+.catalog-filter__inner-list-product-size li a:hover .round,
+.catalog-filter__inner-list-price-range li a:hover .round {
+
+	background-color: #f14a58;
+}
+
+
+.catalog-filter__inner-list-fashion,
+.catalog-filter__inner-list-product-type,
+.catalog-filter__inner-list-color,
+.catalog-filter__inner-list-brand,
+.catalog-filter__inner-list-product-size,
+.catalog-filter__inner-list-price-range {
+	padding: 0 0;
+}
+
+.fade {
+    position: absolute;
+    z-index: 15;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+}
+
+
+/*********************************/
 
 .catalog {
 	padding: 0 60px 0 60px;

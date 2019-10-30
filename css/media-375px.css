@@ -65,15 +65,15 @@
   		transform: rotate(45deg);
   		top: 0;
   		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  		background-color: #f14a58;
 	}
 
 	.head__menu-icon.head__menu-icon-active::after {
   		transform: rotate(-45deg);
   		top: 0;
   		transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  		background-color: #f14a58;
 	}
-
-
 
 
 	/*HIDDEN MENU*/
@@ -125,27 +125,6 @@
 	}
 
 /****/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -415,6 +394,40 @@
 	.footer__down-list-nav li a {
     	font-size: 10px;
 	}
+
+	/*CATALOG*/
+
+	.catalog {
+    	padding: 0 20px 0 20px;
+	}
+
+	.catalog-filter {
+		padding: 25px 20px;
+	}
+
+	.catalog-filter__list li a {
+    	font-size: 13px;
+	}
+
+	.catalog-filter__all-options {
+		display: none;
+		flex-wrap: wrap;
+	}
+	.catalog-filter__all-options-inner {
+		flex-wrap: wrap;
+	}
+	.catalog-filter__all-options-inner-list {
+    	width: 50%;
+	}
+	.catalog-filter__active-filter {
+		display: flex;
+    	width: calc(100% - 40px);
+    	top: 120px; 
+	}
+
+
+
+	/**/
 
 	/*ITEM PAGE STYLES***********************/
 	

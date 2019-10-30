@@ -181,6 +181,7 @@
 	display: inline-block;
 	width: 50%;
 	height: 384px;
+	cursor: pointer;
 }
 
 .banner__left {

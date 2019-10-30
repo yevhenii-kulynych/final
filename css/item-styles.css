@@ -1,5 +1,6 @@
 .back-to,
-.shopping-bag-title {
+.shopping-bag-title,
+.catalog-filter {
 	padding: 25px 60px 25px 60px;
 	box-sizing: border-box;
 	border-bottom: 1px solid lightgrey; 
