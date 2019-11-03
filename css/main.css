@@ -360,7 +360,10 @@ INNER*/
 	width: inherit;
 	position: relative;
 }
-.catalog__item-img:hover .item-hover {
+
+.best-offer__item-img:hover .item-hover,
+.catalog__item-img:hover .item-hover,
+.bag-items__item-preview:hover .item-hover {
 	opacity: 1;
 }
 
@@ -709,4 +712,22 @@ INNER*/
 	font-size: 12px;
 	font-family: 'Roboto';
 	color: black;
+}
+
+
+
+
+
+/*NEW ITEM STYLES*/
+
+.new-item {
+	width: 54px;
+	padding: 8px 8px;
+	background-color: #f14a58;
+	position: absolute;
+	top: 15px;
+	font-size: 13px;
+	font-family: 'Roboto';
+	text-transform: uppercase;
+	color: white;
 }

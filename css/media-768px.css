@@ -222,31 +222,26 @@
 	}
 
 	/*CATALOG STYLES***************************************************/
-
+	.catalog-filter {
+    	padding: 25px 35px;
+    	position: relative;
+	}
 	/*HIDDEN DIV********/
 	.catalog-filter__all-options {
 
 	}
 	.catalog-filter__active-filter {
-
-    	width: calc(100% - 80px);
+    	width: calc(100% - 70px);
     	top: 103px; 
 	}
 
 	/**/
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.catalog-filter__main-wrap {
+		display: flex;
+	}
+	.catalog-filter__drop-down {
+		display: none;
+	}
 
 	.catalog {
     	padding: 0 40px 0 40px;

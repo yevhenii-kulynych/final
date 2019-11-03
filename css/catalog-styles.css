@@ -1,10 +1,14 @@
 
 /*FILTER*/
 .catalog-filter {
-	position: relative;
+	padding: 0 60px;
+	box-sizing: border-box;
+	border-bottom: 1px solid lightgrey; 
+	border-top: 1px solid lightgrey; 
+	margin-top: 25px;
 }
 .catalog-filter__main-wrap {
-	display: flex;
+	display: none;
     justify-content: space-between;
     align-items: center;
     position: relative;
@@ -42,9 +46,6 @@
     width: calc(100% - 120px);
     top: 103px;
 }
-/*.shadow {
-  box-shadow: 0 0 0 9999px rgba(0,0,0, 0.3);
-}*/
 
 
 /**/
@@ -334,4 +335,126 @@
 
 .down-sale-bag {
 	color: grey;
+}
+
+
+
+/*------------------------------------------*/
+.catalog-filter__main-wrap {
+
+}
+.catalog-filter__drop-down-nav {
+	padding: 0 0;
+	display: flex;
+	flex-direction: row;
+}
+.catalog-filter__drop-down-nav div {
+	display: inline-block;
+	position: relative;
+	box-sizing: border-box;
+	width: 17%;
+}
+
+.catalog-filter__drop-down-nav-blocks {
+	padding: 20px 20px;
+	width: 150px;
+}
+.catalog-filter__drop-down-nav-blocks-text {
+	font-size: 16px;
+	font-family: 'Open Sans Bold';
+}
+
+.icon {
+	float: right;
+}
+
+
+
+.catalog-filter__drop-down-nav > div:hover .catalog-filter__drop-down-hidden-fashion,
+.catalog-filter__drop-down-nav > div:hover .catalog-filter__drop-down-hidden-product-type,
+.catalog-filter__drop-down-nav > div:hover .catalog-filter__drop-down-hidden-color,
+.catalog-filter__drop-down-nav > div:hover .catalog-filter__drop-down-hidden-brand,
+.catalog-filter__drop-down-nav > div:hover .catalog-filter__drop-down-hidden-size,
+.catalog-filter__drop-down-nav > div:hover .catalog-filter__drop-down-hidden-price-range {
+	display: block;
+}
+.catalog-filter__drop-down-nav > div:hover ,
+.catalog-filter__drop-down-nav > div:hover ,
+.catalog-filter__drop-down-nav > div:hover ,
+.catalog-filter__drop-down-nav > div:hover ,
+.catalog-filter__drop-down-nav > div:hover,
+.catalog-filter__drop-down-nav > div:hover {
+	-webkit-box-shadow: -8px 0px 5px -2px rgba(219,219,219,0.65);
+	-moz-box-shadow: -8px 0px 5px -2px rgba(219,219,219,0.65);
+	box-shadow: -8px 0px 5px -2px rgba(219,219,219,0.65);
+}
+
+
+
+
+.catalog-filter__drop-down-hidden-fashion,
+.catalog-filter__drop-down-hidden-product-type,
+.catalog-filter__drop-down-hidden-color,
+.catalog-filter__drop-down-hidden-brand,
+.catalog-filter__drop-down-hidden-size,
+.catalog-filter__drop-down-hidden-price-range {
+	position: absolute;
+	padding: 0 0;
+	width: 100%;
+	background-color: #fff;
+	display: none;
+	z-index: 999;
+	top: 74px;
+	left: 0;
+	-webkit-box-shadow: 6px 7px 9px 0px rgba(184,184,184,0.8);
+	-moz-box-shadow: 6px 7px 9px 0px rgba(184,184,184,0.8);
+	box-shadow: 6px 7px 9px 0px rgba(184,184,184,0.8);
+}
+
+.catalog-filter__drop-down-hidden-fashion li,
+.catalog-filter__drop-down-hidden-product-type li,
+.catalog-filter__drop-down-hidden-color li,
+.catalog-filter__drop-down-hidden-brand li,
+.catalog-filter__drop-down-hidden-size li,
+.catalog-filter__drop-down-hidden-price-range li {
+	list-style: none;
+	padding: 15px 20px;
+}
+.catalog-filter__drop-down-hidden-fashion li a,
+.catalog-filter__drop-down-hidden-product-type li a,
+.catalog-filter__drop-down-hidden-color li a,
+.catalog-filter__drop-down-hidden-brand li a,
+.catalog-filter__drop-down-hidden-size li a,
+.catalog-filter__drop-down-hidden-price-range li a{
+	text-decoration: none;
+	color: black;
+	font-size: 12px;
+	font-family: 'Open Sans Bold';
+}
+
+.catalog-filter__drop-down-hidden-fashion li:hover,
+.catalog-filter__drop-down-hidden-product-type li:hover,
+.catalog-filter__drop-down-hidden-color li:hover,
+.catalog-filter__drop-down-hidden-brand li:hover,
+.catalog-filter__drop-down-hidden-size li:hover,
+.catalog-filter__drop-down-hidden-price-range li:hover{
+	background-color: #f7f7f7;
+}
+
+.catalog-filter__drop-down-hidden-fashion li a:hover,
+.catalog-filter__drop-down-hidden-product-type li a:hover,
+.catalog-filter__drop-down-hidden-color li a:hover,
+.catalog-filter__drop-down-hidden-brand li a:hover,
+.catalog-filter__drop-down-hidden-size li a:hover,
+.catalog-filter__drop-down-hidden-price-range li a:hover{
+	color: #f14a58;
+}
+
+
+.catalog-filter__selected-from-drop-down {
+	position: absolute;
+	margin: 0 0;
+	font-size: 16px;
+	font-family: 'Open Sans Bold';
+	color: #f14a58;
 }

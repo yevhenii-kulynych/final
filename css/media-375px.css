@@ -396,6 +396,12 @@
 	}
 
 	/*CATALOG*/
+	.catalog-filter__main-wrap {
+		display: flex;
+	}
+	.catalog-filter__drop-down {
+		display: none;
+	}
 
 	.catalog {
     	padding: 0 20px 0 20px;
@@ -403,8 +409,11 @@
 
 	.catalog-filter {
 		padding: 25px 20px;
+		position: relative;
 	}
-
+	.catalog-filter__list {
+		padding:  0 0;
+	}
 	.catalog-filter__list li a {
     	font-size: 13px;
 	}
