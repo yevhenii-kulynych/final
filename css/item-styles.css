@@ -108,7 +108,7 @@
 .item-content__appearance-size li,
 .item-content__appearance-color li {
 	display: inline-block;
-	margin-right: 70px;
+	margin-right: 55px;
 }
 .item-content__appearance-size li:nth-child(1),
 .item-content__appearance-color li:nth-child(1) {
@@ -124,7 +124,7 @@
 }
 
 .item-content__appearance-color {
-	margin-bottom: 30px;
+	margin: 5px 0 30px 0;
 }
 .item-content__add {
 	display: block;

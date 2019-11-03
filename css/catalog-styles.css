@@ -384,6 +384,7 @@
 .catalog-filter__drop-down-nav > div:hover ,
 .catalog-filter__drop-down-nav > div:hover,
 .catalog-filter__drop-down-nav > div:hover {
+	cursor: url(../img/cursor.png) 7 7, auto;
 	-webkit-box-shadow: -8px 0px 5px -2px rgba(219,219,219,0.65);
 	-moz-box-shadow: -8px 0px 5px -2px rgba(219,219,219,0.65);
 	box-shadow: -8px 0px 5px -2px rgba(219,219,219,0.65);
@@ -439,6 +440,7 @@
 .catalog-filter__drop-down-hidden-size li:hover,
 .catalog-filter__drop-down-hidden-price-range li:hover{
 	background-color: #f7f7f7;
+	cursor: url(../img/cursor.png) 7 7, auto;
 }
 
 .catalog-filter__drop-down-hidden-fashion li a:hover,
@@ -448,6 +450,7 @@
 .catalog-filter__drop-down-hidden-size li a:hover,
 .catalog-filter__drop-down-hidden-price-range li a:hover{
 	color: #f14a58;
+	cursor: url(../img/cursor.png) 7 7, auto;
 }
 
 

@@ -1,3 +1,5 @@
+
+
 let doc = document;
 
 // banner click
@@ -64,87 +66,13 @@ doc.addEventListener("DOMContentLoaded", function() {
 		}
 	}
 	else if (catalogSection[0]) {
-		// console.log('Catalog here');
-		// let slisedCatalogForArrivals = catalogItems.slice(4,8);
-		// let slisedCatalogForArrivalsOthers = catalogItems.slice(8,12);
-		
-		// for (let i = 0; i < slisedCatalogForArrivals.length; i+=1) {
-		// 	let wrap = createElementAndAddClass(['div','catalog__item-wrapper']);
-		// 	let article = createElementAndAddClass(['article','best-offer__item']);
-		// 	let a = createElementAndAddClass(['a','catalog__item-link']);
-		// 	let imgWrap = createElementAndAddClass(['div','catalog__item-img']);
-		// 	let img = createElementAndAddClass(['img']);
-		// 	let hover = createElementAndAddClass(['div', 'item-hover', 'Edit item']);
-		// 	let hoverText = createElementAndAddClass(['p', 'item-hover__text', 'Edit item'])
-		// 	let divForTitle = createElementAndAddClass(['div', 'catalog__item-title']);
-		// 	let title = createElementAndAddClass(['p','catalog__item-title-text', slisedCatalogForArrivals[i].title]);
-		// 	let divForPrice = createElementAndAddClass(['div', 'catalog__item-price']);
-		// 	let price = createElementAndAddClass(['p', 'catalog__item-price-text', '&#163;'+ slisedCatalogForArrivals[i].price]);
-
-		// 	a.href = '#';
-		// 	img.src = slisedCatalogForArrivals[i].thumbnail;
-		// 	hover.appendChild(hoverText);
-		// 	divForPrice.appendChild(price);
-		// 	divForTitle.appendChild(title)
-		// 	imgWrap.appendChild(img);
-		// 	imgWrap.appendChild(hover);
-		// 	a.appendChild(imgWrap);
-		// 	article.appendChild(a);
-		// 	article.appendChild(divForTitle);
-		// 	article.appendChild(divForPrice);
-
-		// 	if (slisedCatalogForArrivals[i].hasNew === true) {
-		// 		let newItem = createElementAndAddClass(['div', 'new-item']);
-		// 		newItem.innerHTML = 'New';
-		// 		article.appendChild(newItem);
-		// 	}
-
-		// 	wrap.appendChild(article);
-
-		// 	catalogInner[0].appendChild(wrap);		
-		// }
-		// for (let i = 0; i < slisedCatalogForArrivalsOthers.length; i+=1) {
-		// 	let wrap = createElementAndAddClass(['div','catalog__item-wrapper']);
-		// 	let article = createElementAndAddClass(['article','best-offer__item']);
-		// 	let a = createElementAndAddClass(['a','catalog__item-link']);
-		// 	let imgWrap = createElementAndAddClass(['div','catalog__item-img']);
-		// 	let img = createElementAndAddClass(['img']);
-		// 	let hover = createElementAndAddClass(['div', 'item-hover', 'Edit item']);
-		// 	let hoverText = createElementAndAddClass(['p', 'item-hover__text', 'Edit item'])
-		// 	let divForTitle = createElementAndAddClass(['div', 'catalog__item-title']);
-		// 	let title = createElementAndAddClass(['p','catalog__item-title-text', slisedCatalogForArrivalsOthers[i].title]);
-		// 	let divForPrice = createElementAndAddClass(['div', 'catalog__item-price']);
-		// 	let price = createElementAndAddClass(['p', 'catalog__item-price-text', '&#163;'+ slisedCatalogForArrivalsOthers[i].price]);
-
-		// 	a.href = '#';
-		// 	img.src = slisedCatalogForArrivalsOthers[i].thumbnail;
-		// 	hover.appendChild(hoverText);
-		// 	divForPrice.appendChild(price);
-		// 	divForTitle.appendChild(title)
-		// 	imgWrap.appendChild(img);
-		// 	imgWrap.appendChild(hover);
-		// 	a.appendChild(imgWrap);
-		// 	article.appendChild(a);
-		// 	article.appendChild(divForTitle);
-		// 	article.appendChild(divForPrice);
-
-		// 	if (slisedCatalogForArrivalsOthers[i].hasNew === true) {
-		// 		let newItem = createElementAndAddClass(['div', 'new-item']);
-		// 		newItem.innerHTML = 'New';
-		// 		article.appendChild(newItem);
-		// 	}
-
-		// 	wrap.appendChild(article);
-
-		// 	catalogInner[1].appendChild(wrap);	
-		// }
-
-
+		console.log('Catalog here');
 	} else {
 		console.log('nothing')
 	}
 
 	//создает елемент добавляет ему класс, а если это 'р' вставляю текст внутрь
+
 	function createElementAndAddClass(arr) {
 		let name = null;
 		for (let i = 0; i < arr.length; i+=1) {
@@ -182,7 +110,7 @@ doc.addEventListener("DOMContentLoaded", function() {
 
 
 //items это лишки в скрытых списках, которые появляются по ховеру на g 
-let items = doc.getElementsByClassName('h');
+let items = doc.getElementsByClassName('catalog-filter__hidden-li-item');
 
 
 //li это блоки в которых текс и скрытые списки
@@ -202,7 +130,6 @@ for (var i = 0; i < blocks.length; i++) {
 
 
 (function() {
-
   // проверяем поддержку
   if (!Element.prototype.matches) {
 
@@ -213,8 +140,9 @@ for (var i = 0; i < blocks.length; i++) {
       Element.prototype.msMatchesSelector;
 
   }
-
 })();
+
+
 
 //пробегаюсь по всем дивам g
 blocksArray.forEach(function(item) {
@@ -222,16 +150,21 @@ blocksArray.forEach(function(item) {
 	//на каждый событие клик. передаю ивент
 	item.addEventListener('click', function(event) {
 		//если по клику ивент таргет  содержит клас .h - это кдасс скрытых лишек  
-		if (event.target.matches('.h')) {
+		if (event.target.matches('.catalog-filter__hidden-li-item')) {
 			//прохожусь циклом по g елементам,тоесть все темже div class="g", 
 			// только мне нужны их дети;
-			item.childNodes.forEach(function(nodes) {
+
+			//для IE
+			let chilsdNodes = []
+			for(let i = 0 ; i < item.childNodes.length; i+=1) {chilsdNodes.push(item.childNodes[i])}
+			
+			chilsdNodes.forEach(function(nodes) {
 				//если это узел ELEMENT_NODE
 				if (nodes.nodeType === 1) {
 					//если нода содержит ребетка с классом j
 					if (nodes.classList.contains('catalog-filter__selected-from-drop-down')) {
 						//циклом по всем скрытым лишкам
-						for (var i = 0; i < itemsArray.length; i++) {
+						for (let i = 0; i < itemsArray.length; i+=1) {
 							//если евент таргет равен лишке
 							if (event.target.innerHTML === itemsArray[i].innerHTML) {
 								//добавляю в уже соззанный нод p class="j" innetHTML 
