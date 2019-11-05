@@ -38,8 +38,54 @@ content[0].addEventListener('click', function(event) {
 })
 
 
-
-
 //просто для отображения
 getLocal();
 getLocalPrice();
+
+
+
+
+
+//попытки замены картинок с мужиком во вкладке item.html
+
+let imgContaiterPreview = doc.getElementsByClassName('item-content__small-preview-container');
+
+//big img
+let bigImage = doc.getElementsByClassName('item-content__big-preview-img');
+
+
+
+imgContaiterPreview[0].addEventListener('click', function(event) {
+	if (event.target && event.target.nodeName === 'IMG') {
+		
+		for (let i = 0; i < catalogItems.length; i+=1) {
+			if (event.currentTarget.dataset.id === catalogItems[i].id) {
+					if(event.target.dataset.name === 'img01') {
+						bigImage[0].src = catalogItems[i].preview[0];
+					}
+					if(event.target.dataset.name === 'img02') {
+						bigImage[0].src = catalogItems[i].preview[1];
+					}
+					if(event.target.dataset.name === 'img03') {
+						bigImage[0].src = catalogItems[i].preview[2];
+					}
+			}
+		}
+	}
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

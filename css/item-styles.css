@@ -47,6 +47,7 @@
 .item-content__small-preview-wrapper {
 	box-sizing: border-box;
 	width: 34%;
+	position: relative;
 }
 
 .item-content__right-describe * {
@@ -135,4 +136,22 @@
 .active {
 	border: 1px solid lightgrey;
 	padding: 13px 16px;
+}
+
+.item-content__small-preview-hidden {
+	background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    opacity: 0;
+    transition: .5s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-active {
+	opacity: 1;
 }
