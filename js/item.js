@@ -78,6 +78,36 @@ imgContaiterPreview[0].addEventListener('click', function(event) {
 
 
 
+console.log(localStorageArray)
+
+
+let addButton = doc.getElementsByClassName('item-content__add');
+
+
+
+addButton[0].addEventListener('click', function() {
+
+	for (let i = 0; i < catalogItems.length; i+=1) {
+		if (this.dataset.id === catalogItems[i].id) {
+				console.log(catalogItems[i]);
+				localStorage.setItem('80d32566-d81c-4ba0-9edf-0eceda3b4360', JSON.stringify(catalogItems[i]));
+				localStorageArray.push({id: catalogItems[i].id, price: catalogItems[i].discountedPrice});
+				//просто для отображения
+				console.log(localStorageArray)
+				localStorage.setItem('item', JSON.stringify(localStorageArray));
+				getLocal();
+				getLocalPrice();
+		}
+	}		
+})
+
+
+
+
+
+
+
+
 
 
 

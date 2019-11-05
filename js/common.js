@@ -202,6 +202,7 @@ function setLocal(obj) {
 
 	localStorage.setItem('item', JSON.stringify(localStorageArray))
 }
+
 setLocal(catalogItems)
 
 
