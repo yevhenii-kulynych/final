@@ -1,7 +1,5 @@
 
 
-let doc = document;
-
 // banner click
 
 let main = doc.getElementsByClassName('wrap');
@@ -35,8 +33,8 @@ doc.addEventListener("DOMContentLoaded", function() {
 			let a = createElementAndAddClass(['a']);
 			let imgWrap = createElementAndAddClass(['div','best-offer__item-img']);
 			let img = createElementAndAddClass(['img']);
-			let hover = createElementAndAddClass(['div', 'item-hover', 'Edit item']);
-			let hoverText = createElementAndAddClass(['p', 'item-hover__text', 'Edit item'])
+			let hover = createElementAndAddClass(['div', 'item-hover', 'View item']);
+			let hoverText = createElementAndAddClass(['p', 'item-hover__text', 'View item'])
 			let divForTitle = createElementAndAddClass(['div', 'best-offer__item-title']);
 			let title = createElementAndAddClass(['p','best-offer__item-title-text', slisedCatalogForArrivals[i].title]);
 			let divForPrice = createElementAndAddClass(['div', 'best-offer__item-price']);
@@ -177,3 +175,49 @@ blocksArray.forEach(function(item) {
 		}
 	})
 })
+
+
+
+
+
+//это просто чтобы показывать то кол-во и ту сумму предметов что в корзине
+//так как они созданы статично,
+//и функции для них будут работать когда подгрузиться страничка shopping-bag
+
+let localStorageArray = [];
+
+function setLocal(obj) {
+
+	for (let i = 0; i < obj.length; i+=1) {
+		if (obj[i].id === "8c061815-6a7d-4465-bb78-1bdc6c5adebf" || 
+			obj[i].id === "ff665110-5e7f-435d-b1b4-651c3d5050ca" ||
+			obj[i].id === "8b300772-eee3-4ff1-b091-e89f17e0e469" ||	
+			obj[i].id === "07cf6ce2-6eee-4e78-a441-f257fdea7ed6") {
+			localStorageArray.push({id: obj[i].id, price: obj[i].discountedPrice})
+		}													
+	}
+
+	localStorage.setItem('item', JSON.stringify(localStorageArray))
+}
+setLocal(catalogItems)
+
+
+function getLocal() {
+	let item = JSON.parse(localStorage.getItem('item'))
+	bagAmount[0].innerHTML = '(' + item.length + ')';
+}
+
+function getLocalPrice() {
+	let obj = JSON.parse(localStorage.getItem('item'))
+	let sum = 0;
+
+	for (let i = 0; i < obj.length; i+=1) {
+		sum+=obj[i].price;
+	}
+
+	bagTotalPrice[0].innerHTML = '&#163;' + sum.toFixed(2);
+}
+
+
+getLocal();
+getLocalPrice();

@@ -36,3 +36,10 @@ content[0].addEventListener('click', function(event) {
 		}
 	}
 })
+
+
+
+
+//просто для отображения
+getLocal();
+getLocalPrice();

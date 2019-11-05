@@ -557,6 +557,19 @@
 	.total-price-and-discount__total-price span {
     	font-size: 18px;
 	}
+	.total-price-and-discount__discount-price {
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		bottom: 30px;
+	}
+	
+	.total-price-and-discount__discount-price span {
+		font-size: 14px;
+	}
+
+
 	.total-price-and-discount__text {
     	padding: 15px 20px;
 	}

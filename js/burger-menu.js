@@ -1,9 +1,11 @@
 
+let doc = document;
+
 
 //бургер меню
-let btn = document.getElementsByClassName('head__menu-icon-wrapper');
-let m = document.getElementsByClassName('head__menu-icon');
-let x = document.getElementsByClassName('head__hidden-menu');
+let btn = doc.getElementsByClassName('head__menu-icon-wrapper');
+let m = doc.getElementsByClassName('head__menu-icon');
+let x = doc.getElementsByClassName('head__hidden-menu');
 
 btn[0].addEventListener('click', function() {
 

@@ -1,9 +1,9 @@
 
 
-let logo = document.getElementsByClassName('head__logo');
+let logo = doc.getElementsByClassName('head__logo');
 
 // меняю лого
-document.addEventListener("DOMContentLoaded", function() {
+doc.addEventListener("DOMContentLoaded", function() {
 	let width = window.innerWidth;
 	if(width <= 667) {
 		logo[0].innerHTML = 'TL';
