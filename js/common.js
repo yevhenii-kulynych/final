@@ -114,6 +114,7 @@ let items = doc.getElementsByClassName('catalog-filter__hidden-li-item');
 //li это блоки в которых текс и скрытые списки
 let blocks = doc.getElementsByClassName('catalog-filter__drop-down-nav-blocks');
 
+
 // это вместо Array.prototype.slice.call('items')
 let itemsArray = [];
 for (var i = 0; i < items.length; i++) {
@@ -169,6 +170,8 @@ blocksArray.forEach(function(item) {
 								nodes.innerHTML  = itemsArray[i].innerHTML;
 							}
 						}
+					} else if (nodes.classList.contains('catalog-filter__drop-down-nav-blocks-text')) {
+						nodes.classList.add('active-select'); //Добавляю класс чтобы текст подпрыгнул вверх
 					}
 				}
 			})

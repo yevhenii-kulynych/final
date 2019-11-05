@@ -460,4 +460,12 @@
 	font-size: 16px;
 	font-family: 'Open Sans Bold';
 	color: #f14a58;
+	bottom: 20px;
+}
+
+
+.active-select {
+	position: relative;
+    bottom: 6px;
+    font-size: 14px;
 }
